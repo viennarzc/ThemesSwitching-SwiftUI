@@ -13,9 +13,13 @@ protocol Theme {
     var backgroundColor: Color { get }
     var accentColor: Color { get }
     var foregroundColor: Color { get }
+    
+    var name: String { get }
 }
 
 struct Theme1: Theme {
+    var name: String = "Theme1"
+    
     var foregroundColor: Color = Color("1-ForegroundColor")
     
     var primaryColor: Color = Color("1-PrimaryColor")
@@ -30,6 +34,8 @@ struct Theme1: Theme {
 }
 
 struct Theme2: Theme {
+    var name: String = "Theme2"
+    
     var foregroundColor: Color = Color("2-ForegroundColor")
     
     var primaryColor: Color = Color("2-PrimaryColor")

@@ -12,6 +12,7 @@ struct ThemeSwitchApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ThemeEnvironment())
         }
     }
 }

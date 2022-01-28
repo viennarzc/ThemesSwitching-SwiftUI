@@ -16,6 +16,7 @@
 		21F58A5827A3EE0E00883402 /* ThemeSwitchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F58A5727A3EE0E00883402 /* ThemeSwitchUITestsLaunchTests.swift */; };
 		21F58A6527A3EE6900883402 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F58A6427A3EE6900883402 /* Themes.swift */; };
 		21F58A6727A3F52100883402 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F58A6627A3F52100883402 /* ThemeManager.swift */; };
+		21F58A6927A4132B00883402 /* ThemeEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F58A6827A4132B00883402 /* ThemeEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		21F58A5727A3EE0E00883402 /* ThemeSwitchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSwitchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		21F58A6427A3EE6900883402 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		21F58A6627A3F52100883402 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		21F58A6827A4132B00883402 /* ThemeEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				21F58A3A27A3EE0D00883402 /* ThemeSwitchApp.swift */,
 				21F58A6427A3EE6900883402 /* Themes.swift */,
 				21F58A6627A3F52100883402 /* ThemeManager.swift */,
+				21F58A6827A4132B00883402 /* ThemeEnvironment.swift */,
 				21F58A3C27A3EE0D00883402 /* ContentView.swift */,
 				21F58A3E27A3EE0E00883402 /* Assets.xcassets */,
 				21F58A4027A3EE0E00883402 /* Preview Content */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F58A3D27A3EE0D00883402 /* ContentView.swift in Sources */,
+				21F58A6927A4132B00883402 /* ThemeEnvironment.swift in Sources */,
 				21F58A6527A3EE6900883402 /* Themes.swift in Sources */,
 				21F58A3B27A3EE0D00883402 /* ThemeSwitchApp.swift in Sources */,
 				21F58A6727A3F52100883402 /* ThemeManager.swift in Sources */,
