@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var themeEnv: ThemeEnvironment
-    @State var pickerValue: Int = 1
+    @Environment(\.colorScheme) var colorScheme
+
+    @State private var pickerValue: Int = 1
     
     var body: some View {
         NavigationView {
@@ -19,11 +21,16 @@ struct ContentView: View {
                         Text("1").tag(1)
                         Text("2").tag(2)
                     }
+                    .onChange(of: pickerValue, perform: { newValue in
+                        print("new val",newValue - 1)
+                        
+                        themeEnv.selectedThemeAS = newValue - 1
+                    })
                     .pickerStyle(.segmented)
-                    
+
                     
                     ZStack() {
-                        themeEnv.selectedTheme.foregroundColor
+                        ForegroundColor()
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Image(systemName: "creditcard")
@@ -49,7 +56,7 @@ struct ContentView: View {
                         }
                         .padding(16)
                         .frame(height: 90, alignment: .center)
-                        .background(themeEnv.selectedTheme.accentColor)
+                        .background(PrimaryColor())
                         .cornerRadius(8)
                         
                         VStack(alignment: .center, spacing: 8) {
@@ -60,13 +67,40 @@ struct ContentView: View {
                         }
                         .padding(16)
                         .frame(height: 90, alignment: .center)
-                        .background(themeEnv.selectedTheme.backgroundColor)
+                        .background(SecondaryColor())
                         .cornerRadius(8)
+                    }
+                    
+                    Spacer()
+                    
+                    Section {
+                        HStack(spacing: 0) {
+                            ZStack {
+                                PrimaryColor()
+                                Text("Primary")
+                            }
+                            ZStack {
+                                
+                                SecondaryColor()
+                                Text("Secondary")
+                            }
+                            
+                            ZStack {
+                                ForegroundColor()
+                                Text("Foreground")
+                            }
+                            
+                            
+                        }
+                        .frame(height: 50, alignment: .center)
                     }
                     
                 }
                 .padding()
-                .navigationTitle("Test")
+                .navigationTitle(colorScheme == .dark ? "In dark mode" : "In light mode")
+            }.onAppear {
+                
+                debugPrint(themeEnv.selectedTheme.name)
             }
         }
     }
@@ -75,5 +109,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
+            .environmentObject(ThemeEnvironment())
+        ContentView()
+            .preferredColorScheme(.light)
+            .environmentObject(ThemeEnvironment())
+        
     }
 }

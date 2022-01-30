@@ -9,14 +9,10 @@ import Foundation
 
 final class ThemeManager {
     
-    private var selectedTheme: Theme = Theme1()
-    
-    func getTheme() -> Theme {
-        return selectedTheme
+    private static let themes: [Theme] = [Theme1(), Theme2()]
+
+    static func getTheme(_ number: Int) -> Theme {
+        return themes[number]
     }
-    
-    func set(theme: Theme) {
-        self.selectedTheme = theme
-    }
-    
+        
 }
