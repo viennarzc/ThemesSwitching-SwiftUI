@@ -74,25 +74,7 @@ struct ContentView: View {
                     Spacer()
                     
                     Section {
-                        HStack(spacing: 0) {
-                            ZStack {
-                                PrimaryColor()
-                                Text("Primary")
-                            }
-                            ZStack {
-                                
-                                SecondaryColor()
-                                Text("Secondary")
-                            }
-                            
-                            ZStack {
-                                ForegroundColor()
-                                Text("Foreground")
-                            }
-                            
-                            
-                        }
-                        .frame(height: 50, alignment: .center)
+                        ComponentView()
                     }
                     
                 }
@@ -117,3 +99,4 @@ struct ContentView_Previews: PreviewProvider {
         
     }
 }
+
