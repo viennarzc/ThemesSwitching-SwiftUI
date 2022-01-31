@@ -77,6 +77,20 @@ struct ContentView: View {
                         ComponentView()
                     }
                     
+                    Section {
+                        Button("Primary Button") {
+                            debugPrint("Action")
+                        }
+                        .buttonStyle(PrimaryButtonStyle())
+                        
+                        Button("Accent Button") {
+                            debugPrint("Accent tap")
+                        }
+                        .buttonStyle(AccentButtonStyle())
+                            
+                    }
+                    
+                    
                 }
                 .padding()
                 .navigationTitle(colorScheme == .dark ? "In dark mode" : "In light mode")

@@ -22,6 +22,13 @@ struct PrimaryColor: View {
     }
 }
 
+struct AccentColor: View {
+    @EnvironmentObject var themeEnv: ThemeEnvironment
+    var body: some View {
+        themeEnv.selectedTheme.accentColor
+    }
+}
+
 
 struct SecondaryColor: View {
     @EnvironmentObject var themeEnv: ThemeEnvironment
